@@ -11,7 +11,7 @@ resource "aws_s3_bucket" "s3" {
         {
             "Effect": "Allow",
             "Principal": {
-                "AWS": "${var.common_codebuild_arn}"
+                "AWS": "${var.principal_arn}"
             },
             "Action": "s3:*",
             "Resource": [
