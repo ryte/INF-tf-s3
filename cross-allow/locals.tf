@@ -1,12 +1,12 @@
 locals {
-  name = "${var.tags["Environment"]}-s3-state-${var.bucket_name}"
+  name = "${var.tags["Environment"]}-s3-cross-allow-${var.name}"
 }
 
 locals {
   tags = "${merge(
     var.tags,
     map(
-      "Module", "s3/state",
+      "Module", "s3/cross-allow",
       "Name", "${local.name}"
     )
   )}"

@@ -1,12 +1,9 @@
-variable "cid" {}
-
-variable "environment" {}
-
-variable "owner" {}
-
-variable "project" {}
+variable "tags" {
+  type = "map"
+  description = "common tags to add to the ressources"
+  default = {}
+}
 
 variable "bucket_name" {}
-
 variable "versioning" {}
 variable "region" {}
