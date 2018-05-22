@@ -1,3 +1,9 @@
+variable "tags" {
+  type = "map"
+  description = "common tags to add to the ressources"
+  default = {}
+}
+
 variable "name" {
   type = "string"
   description = "bucket name"
