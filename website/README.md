@@ -24,7 +24,7 @@ and currently maintained by the [INF](https://github.com/orgs/onpage-org/teams/i
     - __default__: {}
 
 - `versioning_enabled`
-    -  __description__: if the bucket should be versioning
+    -  __description__: if the bucket should be versioned
     -  __type__: `string`
     - __default__: false
 
