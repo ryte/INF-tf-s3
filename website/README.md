@@ -96,11 +96,6 @@ data "aws_iam_policy_document" "s3_policy" {
     -  __description__: bucket arn
     -  __type__: `string`
 
-
-- `bucket`
-    -  __description__: bucket
-    -  __type__: `string`
-
 - `bucket_regional_domain_name`
     -  __description__: bucketname with region in domain
     -  __type__: `string`
