@@ -40,13 +40,3 @@ variable "website_routing_rules" {
   default     = ""
   description = "A json array containing routing rules describing redirect behavior and when redirects are applied"
 }
-
-module "storybook_static" {
-  source = "../../../../INF-tf-s3/website"
-  name = "ryte-storybook-${var.environment}"
-  policy = "${data.aws_iam_policy_document.s3_policy.json}"
-
-  tags = "${local.common_tags}"
-  website_index_document = "index.html"
-  website_error_document = "error.html"
-}
