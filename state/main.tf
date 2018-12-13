@@ -1,6 +1,6 @@
 data "aws_region" "current" {}
 
-resource "aws_s3_bucket" "this" {
+resource "aws_s3_bucket" "bucket" {
   acl    = "private"
   bucket = "${var.name}"
   tags   = "${local.tags}"
