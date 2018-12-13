@@ -4,6 +4,7 @@ Terraform module for creating s3 buckets
 currently available settings
 - [cross-allow](cross-allow/README.md)
 - [state](state/README.md)
+- [website](website/README.md)
 
 
 This project is [internal open source](https://en.wikipedia.org/wiki/Inner_source)
