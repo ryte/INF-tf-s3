@@ -1,22 +1,23 @@
-variable "name" {
-  type = "string"
-  description = "bucket name"
-}
-variable "policy" {
-   type = "string"
-   description = "bucket policy if needed"
-   default = ""
-}
-
 variable "tags" {
   type = "map"
   description = "common tags to add to the ressources"
   default = {}
 }
 
+variable "name" {
+  type = "string"
+  description = "bucket name"
+}
+
+variable "policy" {
+   type = "string"
+   description = "bucket policy if needed"
+   default = ""
+}
+
 variable "versioning_enabled" {
    type = "string"
-   description = "if the bucket should be versioning"
+   description = "if the bucket should be versioned"
    default = false
 }
 

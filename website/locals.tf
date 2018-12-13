@@ -6,7 +6,7 @@ locals {
   tags = "${merge(
     var.tags,
     map(
-      "Module", "s3/cross-allow",
+      "Module", "s3/website",
       "Name", "${local.name}"
     )
   )}"

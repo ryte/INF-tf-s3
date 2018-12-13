@@ -16,9 +16,10 @@ and currently maintained by the [INF](https://github.com/orgs/onpage-org/teams/i
 
 ## Changelog
 
-0.1.0 - Initial release.
+- 0.2.0 - added encryption, streamlined variable names
+- 0.1.1 - added s3 static website
+- 0.1.0 - Initial release.
 
 ## License
-
 
 This software is released under the MIT License (see `LICENSE`).

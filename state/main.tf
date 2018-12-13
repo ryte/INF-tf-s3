@@ -1,10 +1,20 @@
-resource "aws_s3_bucket" "bucket" {
+data "aws_region" "current" {}
+
+resource "aws_s3_bucket" "this" {
   acl    = "private"
-  bucket = "${var.bucket_name}"
+  bucket = "${var.name}"
   tags   = "${local.tags}"
-  region = "${var.region}"
+  region = "${data.aws_region.current}"
 
   versioning {
-    enabled = "${var.versioning}"
+    enabled = "${var.versioning_enabled}"
+  }
+
+  server_side_encryption_configuration {
+    rule {
+      apply_server_side_encryption_by_default {
+        sse_algorithm = "AES256"
+      }
+    }
   }
 }
