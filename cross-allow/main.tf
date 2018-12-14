@@ -25,8 +25,8 @@ data "aws_iam_policy_document" "bucket_policy" {
   statement {
     actions = ["s3:*"]
     resources = [
-      "arn:aws:s3:::${var.name}",
-      "arn:aws:s3:::${var.name}/*"
+      "arn:aws:s3:::${local.name}",
+      "arn:aws:s3:::${local.name}/*"
     ]
 
     principals {

@@ -53,7 +53,7 @@ and currently maintained by the [INF](https://github.com/orgs/onpage-org/teams/i
 
 ```hcl
 module "website" {
-  source = "git@github.com:onpage-org/INF-tf-s3.git?ref=v0.2.0//website"
+  source = "git@github.com:onpage-org/INF-tf-s3.git?ref=v0.2.1//website"
   name   = "fancy_name"
   tags   = "${local.common_tags}"
   policy = "${data.aws_iam_policy_document.s3_policy.json}"
