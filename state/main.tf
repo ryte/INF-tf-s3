@@ -4,7 +4,7 @@ resource "aws_s3_bucket" "bucket" {
   acl    = "private"
   bucket = "${var.name}"
   tags   = "${local.tags}"
-  region = "${data.aws_region.current}"
+  region = "${data.aws_region.current.name}"
 
   versioning {
     enabled = "${var.versioning_enabled}"
