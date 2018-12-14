@@ -4,6 +4,12 @@ variable "tags" {
   default = {}
 }
 
-variable "bucket_name" {}
-variable "versioning" {}
-variable "region" {}
+variable "name" {
+  type = "string"
+  description = "bucket name"
+}
+
+variable "versioning_enabled" {
+  default = true
+  description = "if bucket versioning is enabled"
+}

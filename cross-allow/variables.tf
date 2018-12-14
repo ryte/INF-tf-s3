@@ -13,3 +13,8 @@ variable "principal_arn" {
   type = "string"
   description = "principal_arn which get access"
 }
+
+variable "versioning_enabled" {
+  default = true
+  description = "if the bucket should be versioned"
+}

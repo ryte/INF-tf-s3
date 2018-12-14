@@ -1,5 +1,5 @@
 locals {
-  name = "${var.tags["Environment"]}-s3-state-${var.bucket_name}"
+  name = "${var.tags["Environment"]}-s3-state-${var.name}"
 }
 
 locals {
