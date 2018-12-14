@@ -28,7 +28,7 @@ and currently maintained by the [INF](https://github.com/orgs/onpage-org/teams/i
 
 ```hcl
 module "state" {
-  source      = "git@github.com:onpage-org/INF-tf-s3.git?ref=v0.2.0//state"
+  source      = "git@github.com:onpage-org/INF-tf-s3.git?ref=v0.2.1//state"
   name        = "${var.remote_state_bucket}"
   tags        = "${local.common_tags}"
   versioning  = true
