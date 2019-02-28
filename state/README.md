@@ -4,15 +4,13 @@ Terraform module for creating a aws s3 state bucket
 
 NOTE: bucket names have to be unique __globally__
 
-NOTE: full bucket name will be ${environment}-s3-state-${var.name}
-
 This project is [internal open source](https://en.wikipedia.org/wiki/Inner_source)
 and currently maintained by the [INF](https://github.com/orgs/onpage-org/teams/inf).
 
 ## Module Input Variables
 
 - `name`
-    - __description__: bucket name
+    - __description__: full bucket name
     - __type__: `string`
 
 - `tags`
@@ -31,7 +29,7 @@ module "state" {
   source      = "git@github.com:onpage-org/INF-tf-s3.git?ref=v0.2.1//state"
   name        = "${var.remote_state_bucket}"
   tags        = "${local.common_tags}"
-  versioning  = true
+  versioning_enabled  = true
 }
 ```
 
