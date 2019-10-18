@@ -32,7 +32,7 @@ and currently maintained by the [INF](https://github.com/orgs/ryte/teams/inf).
 
 ```hcl
 module "fancy_cat" {
-  source        = "git@github.com:ryte/INF-tf-s3.git?ref=v0.2.1//cross-allow"
+  source        = "github.com/ryte/INF-tf-s3.git?ref=v0.2.1//cross-allow"
   name          = "fancy-cat"
   tags          = "${local.common_tags}"
   principal_arn = "arn:aws:iam::123456789012:role/rolename"
