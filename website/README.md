@@ -5,7 +5,7 @@ Terraform module for creating a aws s3 bucket with enabled static website
 NOTE: bucket names have to be unique __globally__
 
 This project is [internal open source](https://en.wikipedia.org/wiki/Inner_source)
-and currently maintained by the [INF](https://github.com/orgs/onpage-org/teams/inf).
+and currently maintained by the [INF](https://github.com/orgs/ryte/teams/inf).
 
 ## Module Input Variables
 
@@ -53,7 +53,7 @@ and currently maintained by the [INF](https://github.com/orgs/onpage-org/teams/i
 
 ```hcl
 module "website" {
-  source = "git@github.com:onpage-org/INF-tf-s3.git?ref=v0.2.1//website"
+  source = "git@github.com:ryte/INF-tf-s3.git?ref=v0.2.1//website"
   name   = "fancy_name"
   tags   = "${local.common_tags}"
   policy = "${data.aws_iam_policy_document.s3_policy.json}"
