@@ -26,7 +26,7 @@ and currently maintained by the [INF](https://github.com/orgs/ryte/teams/inf).
 
 ```hcl
 module "state" {
-  source      = "git@github.com:ryte/INF-tf-s3.git?ref=v0.2.1//state"
+  source      = "github.com/ryte/INF-tf-s3.git?ref=v0.2.1//state"
   name        = "${var.remote_state_bucket}"
   tags        = "${local.common_tags}"
   versioning_enabled  = true
