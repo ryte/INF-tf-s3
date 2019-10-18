@@ -7,7 +7,7 @@ NOTE: bucket names have to be unique __globally__
 NOTE: full bucket name will be ${environment}-s3-cross-allow-${var.name}
 
 This project is [internal open source](https://en.wikipedia.org/wiki/Inner_source)
-and currently maintained by the [INF](https://github.com/orgs/onpage-org/teams/inf).
+and currently maintained by the [INF](https://github.com/orgs/ryte/teams/inf).
 
 ## Module Input Variables
 
@@ -32,7 +32,7 @@ and currently maintained by the [INF](https://github.com/orgs/onpage-org/teams/i
 
 ```hcl
 module "fancy_cat" {
-  source        = "git@github.com:onpage-org/INF-tf-s3.git?ref=v0.2.1//cross-allow"
+  source        = "git@github.com:ryte/INF-tf-s3.git?ref=v0.2.1//cross-allow"
   name          = "fancy-cat"
   tags          = "${local.common_tags}"
   principal_arn = "arn:aws:iam::123456789012:role/rolename"
