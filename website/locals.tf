@@ -3,11 +3,12 @@ locals {
 }
 
 locals {
-  tags = "${merge(
+  tags = merge(
     var.tags,
-    map(
-      "Module", "s3/website",
-      "Name", "${local.name}"
-    )
-  )}"
+    {
+      "Module" = "s3/website"
+      "Name"   = local.name
+    },
+  )
 }
+
