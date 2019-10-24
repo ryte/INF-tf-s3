@@ -1,7 +1,9 @@
 variable "tags" {
   type        = map(string)
   description = "common tags to add to the ressources"
-  default     = {}
+  default     = {
+    "Environment" = ""
+  }
 }
 
 variable "name" {
