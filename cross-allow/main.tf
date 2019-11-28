@@ -31,7 +31,7 @@ data "aws_iam_policy_document" "bucket_policy" {
 
     principals {
       type = "AWS"
-      identifiers = ["${var.principal_arn}"]
+      identifiers = ["${var.principal_arns}"]
     }
   }
 }
