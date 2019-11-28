@@ -22,7 +22,6 @@ and currently maintained by the [INF](https://github.com/orgs/ryte/teams/inf).
 
 - `principal_arn`
     - __description__: principal_arn which gets access (all permissions) to this bucket
-    - __type__: `string`
 
 - `versioning_enabled`
     - __description__: if bucket versioning is enabled
