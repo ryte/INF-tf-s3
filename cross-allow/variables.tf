@@ -10,6 +10,7 @@ variable "name" {
 }
 
 variable "principal_arn" {
+  type = "list"
   description = "principal_arn which get access"
 }
 
