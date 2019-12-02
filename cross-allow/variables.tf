@@ -9,9 +9,9 @@ variable "name" {
   description = "bucket name"
 }
 
-variable "principal_arn" {
-  type = "string"
-  description = "principal_arn which get access"
+variable "principal_arns" {
+  type = "list"
+  description = "principal_arns which get access"
 }
 
 variable "versioning_enabled" {

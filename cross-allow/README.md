@@ -20,9 +20,9 @@ and currently maintained by the [INF](https://github.com/orgs/ryte/teams/inf).
     - __type__: `map`
     - __default__: {}
 
-- `principal_arn`
-    - __description__: principal_arn which gets access (all permissions) to this bucket
-    - __type__: `string`
+- `principal_arns`
+    - __description__: principal_arns which gets access (all permissions) to this bucket
+    - __type__: `list`
 
 - `versioning_enabled`
     - __description__: if bucket versioning is enabled
@@ -35,7 +35,7 @@ module "fancy_cat" {
   source        = "github.com/ryte/INF-tf-s3.git?ref=v0.2.1//cross-allow"
   name          = "fancy-cat"
   tags          = "${local.common_tags}"
-  principal_arn = "arn:aws:iam::123456789012:role/rolename"
+  principal_arns = ["arn:aws:iam::123456789012:role/rolename"]
 }
 ```
 
