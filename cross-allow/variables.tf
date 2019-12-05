@@ -9,8 +9,8 @@ variable "name" {
   description = "bucket name"
 }
 
-variable "principal_arn" {
-  type        = string
+variable "principal_arns" {
+  type        = list(string)
   description = "principal_arn which get access"
 }
 

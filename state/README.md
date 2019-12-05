@@ -15,7 +15,7 @@ and currently maintained by the [INF](https://github.com/orgs/ryte/teams/inf).
 
 - `tags`
     - __description__: a map of tags which is added to all supporting ressources
-    - __type__: `map`
+    - __type__: `map(string)`
     - __default__: {}
 
 - `versioning_enabled`
@@ -26,9 +26,9 @@ and currently maintained by the [INF](https://github.com/orgs/ryte/teams/inf).
 
 ```hcl
 module "state" {
-  source      = "github.com/ryte/INF-tf-s3.git//state?ref=v0.3.0"
-  name        = "${var.remote_state_bucket}"
-  tags        = "${local.common_tags}"
+  source      = "github.com/ryte/INF-tf-s3.git//state?ref=v0.4.0"
+  name        = var.remote_state_bucket
+  tags        = local.common_tags
   versioning_enabled  = true
 }
 ```
