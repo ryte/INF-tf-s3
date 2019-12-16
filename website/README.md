@@ -53,10 +53,10 @@ and currently maintained by the [INF](https://github.com/orgs/ryte/teams/inf).
 
 ```hcl
 module "website" {
-  source = "github.com/ryte/INF-tf-s3.git?ref=v0.2.1//website"
+  source = "github.com/ryte/INF-tf-s3//website?ref=v0.4.0"
   name   = "fancy_name"
-  tags   = "${local.common_tags}"
-  policy = "${data.aws_iam_policy_document.s3_policy.json}"
+  tags   = local.common_tags
+  policy = data.aws_iam_policy_document.s3_policy.json
 
   website_index_document = "index.html"
   website_error_document = "error.html"

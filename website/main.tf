@@ -1,22 +1,23 @@
-data "aws_region" "current" {}
+data "aws_region" "current" {
+}
 
 resource "aws_s3_bucket" "this" {
-  acl       = "public-read"
-  bucket    = "${var.name}"
-  tags      = "${local.tags}"
-  region    = "${data.aws_region.current.name}"
+  acl    = "public-read"
+  bucket = var.name
+  tags   = local.tags
+  region = data.aws_region.current.name
 
   versioning {
-    enabled    = "${var.versioning_enabled}"
-    mfa_delete = "${var.versioning_mfa_delete}"
+    enabled    = var.versioning_enabled
+    mfa_delete = var.versioning_mfa_delete
   }
 
-  policy    = "${var.policy}"
+  policy = var.policy
 
   website {
-    index_document = "${var.website_index_document}"
-    error_document = "${var.website_error_document}"
-    routing_rules  = "${var.website_routing_rules}"
+    index_document = var.website_index_document
+    error_document = var.website_error_document
+    routing_rules  = var.website_routing_rules
   }
 
   server_side_encryption_configuration {
@@ -27,3 +28,4 @@ resource "aws_s3_bucket" "this" {
     }
   }
 }
+

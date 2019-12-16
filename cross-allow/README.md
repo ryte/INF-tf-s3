@@ -17,12 +17,12 @@ and currently maintained by the [INF](https://github.com/orgs/ryte/teams/inf).
 
 - `tags`
     - __description__: a map of tags which is added to all supporting ressources
-    - __type__: `map`
+    - __type__: `map(string)`
     - __default__: {}
 
 - `principal_arns`
     - __description__: principal_arns which gets access (all permissions) to this bucket
-    - __type__: `list`
+    - __type__: `list(string)`
 
 - `versioning_enabled`
     - __description__: if bucket versioning is enabled
@@ -32,9 +32,9 @@ and currently maintained by the [INF](https://github.com/orgs/ryte/teams/inf).
 
 ```hcl
 module "fancy_cat" {
-  source        = "github.com/ryte/INF-tf-s3.git?ref=v0.2.1//cross-allow"
+  source        = "github.com/ryte/INF-tf-s3//cross-allow?ref=v0.4.0"
   name          = "fancy-cat"
-  tags          = "${local.common_tags}"
+  tags          = local.common_tags
   principal_arns = ["arn:aws:iam::123456789012:role/rolename"]
 }
 ```

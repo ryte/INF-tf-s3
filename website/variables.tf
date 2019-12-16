@@ -1,30 +1,30 @@
 variable "tags" {
-  type = "map"
+  type        = map(string)
   description = "common tags to add to the ressources"
-  default = {}
+  default     = {}
 }
 
 variable "name" {
-  type = "string"
+  type        = string
   description = "bucket name"
 }
 
 variable "policy" {
-   type = "string"
-   description = "bucket policy if needed"
-   default = ""
+  type        = string
+  description = "bucket policy if needed"
+  default     = ""
 }
 
 variable "versioning_enabled" {
-   type = "string"
-   description = "if the bucket should be versioned"
-   default = false
+  type        = string
+  description = "if the bucket should be versioned"
+  default     = false
 }
 
 variable "versioning_mfa_delete" {
-   type = "string"
-   description = "Enable MFA delete for either Change the versioning state of your bucket or Permanently delete an object version"
-   default = false
+  type        = string
+  description = "Enable MFA delete for either Change the versioning state of your bucket or Permanently delete an object version"
+  default     = false
 }
 
 variable "website_index_document" {
@@ -41,3 +41,4 @@ variable "website_routing_rules" {
   default     = ""
   description = "A json array containing routing rules describing redirect behavior and when redirects are applied"
 }
+
