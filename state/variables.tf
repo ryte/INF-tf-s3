@@ -1,9 +1,7 @@
 variable "tags" {
   type        = map(string)
   description = "common tags to add to the ressources"
-  default     = {
-    "Environment" = ""
-  }
+  default     = {}
 }
 
 variable "name" {
@@ -16,3 +14,5 @@ variable "versioning_enabled" {
   description = "if bucket versioning is enabled"
 }
 
+variable "environment" {
+}

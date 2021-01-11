@@ -11,6 +11,10 @@ and currently maintained by the [INF](https://github.com/orgs/ryte/teams/inf).
 
 ## Module Input Variables
 
+- `environment`
+    - __description__: the environment this bucket is used for (e.g. 'testing')
+    - __type__: `string`
+
 - `name`
     - __description__: bucket name identifier
     - __type__: `string`
@@ -32,9 +36,10 @@ and currently maintained by the [INF](https://github.com/orgs/ryte/teams/inf).
 
 ```hcl
 module "fancy_cat" {
-  source        = "github.com/ryte/INF-tf-s3//cross-allow?ref=v0.4.0"
-  name          = "fancy-cat"
-  tags          = local.common_tags
+  source         = "github.com/ryte/INF-tf-s3//cross-allow?ref=v0.4.2"
+  name           = "fancy-cat"
+  tags           = local.common_tags
+  environment    = var.environment
   principal_arns = ["arn:aws:iam::123456789012:role/rolename"]
 }
 ```

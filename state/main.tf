@@ -4,7 +4,7 @@ data "aws_region" "current" {
 resource "aws_s3_bucket" "bucket" {
   acl    = "private"
   bucket = var.name
-  tags   = local.tags
+  tags   = merge(local.tags, {type = "data"})
   region = data.aws_region.current.name
 
   versioning {
@@ -19,4 +19,3 @@ resource "aws_s3_bucket" "bucket" {
     }
   }
 }
-

@@ -9,6 +9,10 @@ and currently maintained by the [INF](https://github.com/orgs/ryte/teams/inf).
 
 ## Module Input Variables
 
+- `environment`
+    - __description__: the environment this bucket is used for (e.g. 'testing')
+    - __type__: `string`
+
 - `name`
     - __description__: bucket name
     - __type__: `string`
@@ -53,10 +57,11 @@ and currently maintained by the [INF](https://github.com/orgs/ryte/teams/inf).
 
 ```hcl
 module "website" {
-  source = "github.com/ryte/INF-tf-s3//website?ref=v0.4.0"
-  name   = "fancy_name"
-  tags   = local.common_tags
-  policy = data.aws_iam_policy_document.s3_policy.json
+  source      = "github.com/ryte/INF-tf-s3//website?ref=v0.4.2"
+  name        = "fancy_name"
+  tags        = local.common_tags
+  environment = var.environment
+  policy      = data.aws_iam_policy_document.s3_policy.json
 
   website_index_document = "index.html"
   website_error_document = "error.html"

@@ -19,3 +19,5 @@ variable "versioning_enabled" {
   description = "if the bucket should be versioned"
 }
 
+variable "environment" {
+}

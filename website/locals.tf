@@ -1,5 +1,5 @@
 locals {
-  name = "${var.tags["Environment"]}-s3-website-${var.name}"
+  name = "${var.environment}-s3-website-${var.name}"
 }
 
 locals {
@@ -11,4 +11,3 @@ locals {
     },
   )
 }
-

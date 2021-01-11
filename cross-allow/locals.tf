@@ -1,5 +1,5 @@
 locals {
-  name = "${var.tags["Environment"]}-s3-cross-allow-${var.name}"
+  name = "${var.environment}-s3-cross-allow-${var.name}"
 }
 
 locals {
@@ -11,4 +11,3 @@ locals {
     },
   )
 }
-
