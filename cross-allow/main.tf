@@ -4,7 +4,7 @@ data "aws_region" "current" {
 resource "aws_s3_bucket" "s3" {
   acl    = "private"
   bucket = local.name
-  tags   = local.tags
+  tags   = merge(local.tags, {type = "data"})
   region = data.aws_region.current.name
 
   versioning {
@@ -36,4 +36,3 @@ data "aws_iam_policy_document" "bucket_policy" {
     }
   }
 }
-

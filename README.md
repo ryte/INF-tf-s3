@@ -17,6 +17,7 @@ and currently maintained by the [INF](https://github.com/orgs/ryte/teams/inf).
 
 ## Changelog
 
+- 0.4.2 - Add variable `environment` instead of reading from tags
 - 0.4.1 - Fix typo in cross-allow module
 - 0.4.0 - Upgrade to terraform 0.12.x
 - 0.3.0 - make principal_arns in cross-allow a list instead of a string

@@ -42,3 +42,5 @@ variable "website_routing_rules" {
   description = "A json array containing routing rules describing redirect behavior and when redirects are applied"
 }
 
+variable "environment" {
+}

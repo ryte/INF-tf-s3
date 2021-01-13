@@ -9,6 +9,10 @@ and currently maintained by the [INF](https://github.com/orgs/ryte/teams/inf).
 
 ## Module Input Variables
 
+- `environment`
+    - __description__: the environment this bucket is used for (e.g. 'testing')
+    - __type__: `string`
+
 - `name`
     - __description__: full bucket name
     - __type__: `string`
@@ -26,9 +30,11 @@ and currently maintained by the [INF](https://github.com/orgs/ryte/teams/inf).
 
 ```hcl
 module "state" {
-  source      = "github.com/ryte/INF-tf-s3//state?ref=v0.4.0"
+  source      = "github.com/ryte/INF-tf-s3//state?ref=v0.4.2"
   name        = var.remote_state_bucket
   tags        = local.common_tags
+  environment = var.environment
+
   versioning_enabled  = true
 }
 ```
