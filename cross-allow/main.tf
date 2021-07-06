@@ -1,11 +1,7 @@
-data "aws_region" "current" {
-}
-
 resource "aws_s3_bucket" "s3" {
   acl    = "private"
   bucket = local.name
   tags   = merge(local.tags, {type = "data"})
-  region = data.aws_region.current.name
 
   versioning {
     enabled = var.versioning_enabled
