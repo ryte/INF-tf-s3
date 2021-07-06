@@ -57,7 +57,7 @@ and currently maintained by the [INF](https://github.com/orgs/ryte/teams/inf).
 
 ```hcl
 module "website" {
-  source      = "github.com/ryte/INF-tf-s3//website?ref=v0.4.2"
+  source      = "github.com/ryte/INF-tf-s3//website?ref=v0.4.3"
   name        = "fancy_name"
   tags        = local.common_tags
   environment = var.environment

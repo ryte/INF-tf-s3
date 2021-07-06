@@ -36,7 +36,7 @@ and currently maintained by the [INF](https://github.com/orgs/ryte/teams/inf).
 
 ```hcl
 module "fancy_cat" {
-  source         = "github.com/ryte/INF-tf-s3//cross-allow?ref=v0.4.2"
+  source         = "github.com/ryte/INF-tf-s3//cross-allow?ref=v0.4.3"
   name           = "fancy-cat"
   tags           = local.common_tags
   environment    = var.environment
