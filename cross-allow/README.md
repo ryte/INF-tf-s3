@@ -9,29 +9,82 @@ NOTE: full bucket name will be ${environment}-s3-cross-allow-${var.name}
 This project is [internal open source](https://en.wikipedia.org/wiki/Inner_source)
 and currently maintained by the [INF](https://github.com/orgs/ryte/teams/inf).
 
-## Module Input Variables
+<!-- BEGINNING OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
+## Requirements
 
-- `environment`
-    - __description__: the environment this bucket is used for (e.g. 'testing')
-    - __type__: `string`
+The following requirements are needed by this module:
 
-- `name`
-    - __description__: bucket name identifier
-    - __type__: `string`
+- terraform (>= 0.12)
 
-- `tags`
-    - __description__: a map of tags which is added to all supporting ressources
-    - __type__: `map(string)`
-    - __default__: {}
+## Providers
 
-- `principal_arns`
-    - __description__: principal_arns which gets access (all permissions) to this bucket
-    - __type__: `list(string)`
+The following providers are used by this module:
 
-- `versioning_enabled`
-    - __description__: if bucket versioning is enabled
-    - __default__: true
+- aws
 
+## Required Inputs
+
+The following input variables are required:
+
+### environment
+
+Description: the environment this bucket is used for (e.g. 'testing')
+
+Type: `string`
+
+### name
+
+Description: bucket name identifier
+
+Type: `string`
+
+### principal\_arns
+
+Description: principal\_arns which get access (all permissions) to this bucket
+
+Type: `list(string)`
+
+## Optional Inputs
+
+The following input variables are optional (have default values):
+
+### tags
+
+Description: common tags to add to the ressources
+
+Type: `map(string)`
+
+Default: `{}`
+
+### versioning\_enabled
+
+Description: if the bucket should be versioned
+
+Type: `bool`
+
+Default: `true`
+
+## Outputs
+
+The following outputs are exported:
+
+### arn
+
+Description: bucket arn
+
+### bucket
+
+Description: bucket
+
+### bucket\_regional\_domain\_name
+
+Description: bucket name with region in domain
+
+### id
+
+Description: bucket id
+
+<!-- END OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
 ## Usage
 
 ```hcl
@@ -43,21 +96,3 @@ module "fancy_cat" {
   principal_arns = ["arn:aws:iam::123456789012:role/rolename"]
 }
 ```
-
-## Outputs
-
-- `arn`
-    - __description__: bucket arn
-    - __type__: `string`
-
-- `id`
-    - __description__: bucket id
-    - __type__: `string`
-
-- `bucket`
-    - __description__: bucket
-    - __type__: `string`
-
-- `bucket_regional_domain_name`
-    - __description__: bucket name with region in domain
-    - __type__: `string`

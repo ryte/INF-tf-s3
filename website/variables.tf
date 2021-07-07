@@ -28,19 +28,21 @@ variable "versioning_mfa_delete" {
 }
 
 variable "website_index_document" {
-  default     = "index.html"
   description = "Amazon S3 returns this index document when requests are made to the root domain or any of the subfolders"
+  default     = "index.html"
 }
 
 variable "website_error_document" {
-  default     = "404.html"
   description = "An absolute path to the document to return in case of a 4XX error"
+  default     = "404.html"
 }
 
 variable "website_routing_rules" {
-  default     = ""
   description = "A json array containing routing rules describing redirect behavior and when redirects are applied"
+  default     = ""
 }
 
 variable "environment" {
+  type        = string
+  description = "the environment this bucket is used for (e.g. 'testing')"
 }

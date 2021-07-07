@@ -10,9 +10,11 @@ variable "name" {
 }
 
 variable "versioning_enabled" {
-  default     = true
   description = "if bucket versioning is enabled"
+  default     = true
 }
 
 variable "environment" {
+  type        = string
+  description = "the environment this bucket is used for (e.g. 'testing')"
 }
