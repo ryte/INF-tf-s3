@@ -21,7 +21,7 @@ and currently maintained by the [INF](https://github.com/orgs/ryte/teams/inf).
 - 0.4.2 - Add variable `environment` instead of reading from tags
 - 0.4.1 - Fix typo in cross-allow module
 - 0.4.0 - Upgrade to terraform 0.12.x
-- 0.3.0 - make principal_arns in cross-allow a list instead of a string
+- 0.3.0 - make principal\_arns in cross-allow a list instead of a string
 - 0.2.1 - bugfix of bucket name
 - 0.2.0 - added encryption, streamlined variable names
 - 0.1.1 - added s3 static website

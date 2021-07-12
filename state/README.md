@@ -7,25 +7,76 @@ NOTE: bucket names have to be unique __globally__
 This project is [internal open source](https://en.wikipedia.org/wiki/Inner_source)
 and currently maintained by the [INF](https://github.com/orgs/ryte/teams/inf).
 
-## Module Input Variables
+<!-- BEGINNING OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
+## Requirements
 
-- `environment`
-    - __description__: the environment this bucket is used for (e.g. 'testing')
-    - __type__: `string`
+The following requirements are needed by this module:
 
-- `name`
-    - __description__: full bucket name
-    - __type__: `string`
+- terraform (>= 0.12)
 
-- `tags`
-    - __description__: a map of tags which is added to all supporting ressources
-    - __type__: `map(string)`
-    - __default__: {}
+## Providers
 
-- `versioning_enabled`
-    - __description__: if the bucket should be versioned
-    - __default__: `string`
+The following providers are used by this module:
 
+- aws
+
+## Required Inputs
+
+The following input variables are required:
+
+### environment
+
+Description: the environment this bucket is used for (e.g. 'testing')
+
+Type: `string`
+
+### name
+
+Description: bucket name
+
+Type: `string`
+
+## Optional Inputs
+
+The following input variables are optional (have default values):
+
+### tags
+
+Description: common tags to add to the ressources
+
+Type: `map(string)`
+
+Default: `{}`
+
+### versioning\_enabled
+
+Description: if bucket versioning is enabled
+
+Type: `bool`
+
+Default: `true`
+
+## Outputs
+
+The following outputs are exported:
+
+### arn
+
+Description: bucket arn
+
+### bucket
+
+Description: bucket
+
+### bucket\_regional\_domain\_name
+
+Description: bucket name with region in domain
+
+### id
+
+Description: bucket id
+
+<!-- END OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
 ## Usage
 
 ```hcl
@@ -38,21 +89,3 @@ module "state" {
   versioning_enabled  = true
 }
 ```
-
-## Outputs
-
-- `arn`
-    - __description__: bucket arn
-    - __type__: `string`
-
-- `id`
-    - __description__: bucket id
-    - __type__: `string`
-
-- `bucket`
-    - __description__: bucket
-    - __type__: `string`
-
-- `bucket_regional_domain_name`
-    - __description__: bucket name with region in domain
-    - __type__: `string`

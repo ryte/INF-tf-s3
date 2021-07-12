@@ -1,7 +1,7 @@
 resource "aws_s3_bucket" "s3" {
   acl    = "private"
   bucket = local.name
-  tags   = merge(local.tags, {type = "data"})
+  tags   = merge(local.tags, { type = "data" })
 
   versioning {
     enabled = var.versioning_enabled
